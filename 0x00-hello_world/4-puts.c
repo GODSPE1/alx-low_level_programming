@@ -1,5 +1,9 @@
 #include <stdio.h>
-/*This the main function, it describes about the function*/
+/**
+ * main -  function, it describes about the function
+ *
+ * Return: (0);
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
