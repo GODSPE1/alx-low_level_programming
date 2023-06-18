@@ -1,0 +1,21 @@
+#include <stdio.h>
+/**
+  * main - Entry point
+  *
+  *Return: always 0
+  */
+int main(void)
+{
+
+	int i = 0;
+
+	while (i <= 9)
+	{
+		printf("%d\n", i);
+		i++;
+	}
+
+	printf("\n");
+
+	return (0);
+}
