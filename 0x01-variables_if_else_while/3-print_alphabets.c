@@ -19,6 +19,5 @@
 		putchar (d);
 		d++;
 	}
-	putchar('c');
 	return (0);
 }
