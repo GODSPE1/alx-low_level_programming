@@ -15,7 +15,7 @@ int main(void)
 		number++;
 	}
 
-	while (letter <= 103)
+	while (letter <= 102)
 	{
 		putchar(letter);
 		letter++;
