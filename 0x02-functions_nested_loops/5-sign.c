@@ -10,7 +10,7 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		purchar(43);
+		_purchar(43);
 		return (1);
 	}
 	else if (n < 0)
