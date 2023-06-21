@@ -6,7 +6,7 @@
  */
 void print_alphabet(void)
 {
-	char letter = 'a';
+	int i = 97;
 
 	while (i <= 122)
 	{
