@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - check the code.
+ * print_sign - prints the sign of a number.
  *@n: represent the integer
  *This function takes an integer as input and prints the sign of the number.
  * If the number is positive, it prints a plus sign (+).
