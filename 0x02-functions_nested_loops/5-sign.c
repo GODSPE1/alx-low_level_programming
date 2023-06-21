@@ -10,7 +10,7 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		-purchar(43);
+		purchar(43);
 		return (1);
 	}
 	else if (n < 0)
@@ -23,5 +23,5 @@ int print_sign(int n)
 		_putchar(48);
 		return (0);
 	}
-	-putchar('\n');
+	_putchar('\n');
 }
