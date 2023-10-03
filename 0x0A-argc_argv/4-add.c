@@ -10,21 +10,30 @@
 int main(int argc, char *argv[])
 {
 	int i, num, sum  = 0;
+	int j = 0;
 
-	if (argc < 3)
+	char *ptr;
+
+	if (argc < 2)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	for (i = 1; i < argc; i++)
 	{
-		num = (atoi(argv[i]));
-		if (num == 0)
+		ptr = argv[i];
+		
+		while (ptr[j] != '\0')
 		{
-			printf("Error\n");
-			return (1);
+			if (ptr[j] < 48 || ptr[j] > 57)
+			{
+				printf("Error\n");
+				return (1);
+			}
+			break;
+			j++;
 		}
-		else
+		num = (atoi(ptr));
 		sum += num;
 	}
 	printf("%d\n", sum);
