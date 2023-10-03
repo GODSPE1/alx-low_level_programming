@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		ptr = argv[i];
-		
 		while (ptr[j] != '\0')
 		{
 			if (ptr[j] < 48 || ptr[j] > 57)
