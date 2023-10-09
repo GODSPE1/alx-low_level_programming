@@ -36,10 +36,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[k] = s1[k];
 	}
 
-	for (c = 0; c < n; c++)
+	for (c = 0; c < n && s2[i] != '\0'; c++)
 	{
 		p[i + c] = s2[c];
 	}
+	p[i + n] = '\0';
 
 	return (p);
 }
