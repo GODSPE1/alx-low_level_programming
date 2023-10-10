@@ -9,6 +9,7 @@
 int *array_range(int min, int max)
 {
 	int num, i, *p;
+	int k = 0;
 
 	if (min > max)
 		return (NULL);
@@ -16,15 +17,15 @@ int *array_range(int min, int max)
 	num = ((max - min) + 1);
 
 
-	p = malloc(num * sizeof(num));
+	p = malloc(num * sizeof(int));
 	if (p == NULL)
 	{
-		printf("Insufficient memory space");
 		return (NULL);
 	}
 	for (i = min; i <= max; i++)
 	{
-		p[i] = (min + i);
+		p[k] = i;
+		k++;
 
 	}
 
