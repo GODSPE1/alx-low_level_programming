@@ -6,7 +6,7 @@
  */
 void free_dog(dog_t *d)
 {
-	free(my_dog);
+	free(new_dog);
 
 	return (0);
 }
