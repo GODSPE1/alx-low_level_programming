@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "function_pointers"
 /**
  * array_iterator - iterates through the array
  * @array: A pointer to an array of integers.
