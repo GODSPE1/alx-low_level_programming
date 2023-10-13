@@ -7,14 +7,15 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	int i;
+	int i = 0;
 
-	if  (arry == NULL || action == NULL)
+	if  (array == NULL || action == NULL)
 		return;
 
-	for (i = 0; i < size; i++)
+	while (i < (int)size)
 	{
 		action(array[i]);
+		i++;
 	}
 
 
