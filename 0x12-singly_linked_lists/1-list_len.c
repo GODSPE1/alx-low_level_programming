@@ -7,13 +7,15 @@
  */
 size_t list_len(const list_t *h)
 {
-	unsigned int count = 0;
+	size_t count;
+	const list_t *temp;
 
 	if (h == NULL)
 		return (0);
 
-	list_t *temp = NULL;
+	count = 0;
 	temp = h;
+
 	while (temp != NULL)
 	{
 		count++;
