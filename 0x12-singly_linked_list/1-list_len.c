@@ -9,14 +9,15 @@ size_t list_len(const list_t *h)
 {
 	list_t *temp;
 	unsigned int count = 0;
+
 	temp = h;
 	if (h == NULL)
-		return (0); 
-	else
-		while (temp != NULL)
-		{
-			count++;
-			temp = temp->next;
-		}
+		return (0);
+
+	while (temp != NULL)
+	{
+		count++;
+		temp = temp->next;
+	}
 	return (count);
 }
