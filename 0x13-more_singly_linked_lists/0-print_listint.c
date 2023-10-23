@@ -2,7 +2,7 @@
 #include "lists.h"
 /**
  * print_listint  - print all the elements of the listint_t list
- * 
+ * @h: pointer to the head
  * Return: the number of nodes on success
  */
 size_t print_listint(const listint_t *h)
