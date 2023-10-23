@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * add_nodeint - insert node at the beginning 
+ * add_nodeint - insert node at the beginning
  * @head: a pointer to a pointer to a struct node
  * @n: data in the linked list
  *
@@ -10,6 +10,7 @@
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *newnode = malloc(sizeof(listint_t));
+
 	if (newnode == NULL)
 		return (NULL);
 	newnode->n = n;
