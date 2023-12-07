@@ -1,9 +1,10 @@
-#ifndef _LISTS.H_
-#define _LISTS.H_
+#ifndef LISTS_H
+#define LISTS_H
 
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <stddef.h>
 
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
