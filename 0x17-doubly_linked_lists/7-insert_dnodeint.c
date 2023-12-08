@@ -20,10 +20,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		return (NULL);
 	}
-
-	newNode->n = n;
+	struct node(struct node *head, int data)
+	{
+	struct node *temp = malloc(sizeof(struct node));
+	temp->data = data;
 	newNode->next = NULL;
 	newNode->prev = NULL;
+	head = temp;
+	return (head)
+		}
 
 	dlistint_t *temp;
 	dlistint_t *temp2
