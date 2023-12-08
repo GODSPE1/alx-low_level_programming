@@ -7,19 +7,25 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
+	dlistint_t *newnode;
 	unsigned int count;
 
 	if (head == NULL)
 		return (NULL);
 
-	while (head != NULL)
+	while (head->prev != NULL)
+		head = head-prev;
+
+	newnode = head;
+
+	while (newnode != NULL)
 	{
-		if (index - 1 == count)
+		if (count == index)
 		{
-			return (head);
+			return (newnode);
 		}
 		count++;
-		head = head->next;
+		newnode = newnode->next;
 	}
 	return (NULL);
 
