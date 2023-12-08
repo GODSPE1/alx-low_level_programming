@@ -8,32 +8,52 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *newNode = NULL;
-	dlistint_t *temp = *h;
-	dlistint_t *temp2 = NULL;
+    dlistint_t *newNode = malloc(sizeof(dlistint_t));
+    if (newNode == NULL)
+    {
+        /* Handle memory allocation failure */
+        return NULL;
+    }
 
-	newNode->n = n;
-	newNode->next = NULL;
-	newNode->prev = NULL;
-	*head = temp;
+    newNode->n = n;
+    newNode->next = NULL;
+    newNode->prev = NULL;
 
-	while (idx != 1)
-	{
-		temp = temp->next;
-		idx--;
-	}
-	if (temp->next == NULL)
-	{
-		temp->next = newNode;
-		newNode->prev = temp;
-	}
-	else 
-	{
-		temp2 = temp->next;
-		temp->next = newNode
-			temp2->prev = newNode;
-		newNode->next = temp2;
-		newNode->prev = temp;
-	}
-	return (*h);
+    dlistint_t *temp = *h;
+    dlistint_t *temp2 = NULL;
+
+    if (idx == 0)
+    {
+        newNode->next = *h;
+        if (*h != NULL)
+        {
+            (*h)->prev = newNode;
+        }
+        *h = newNode;
+        return newNode;
+    }
+
+    while (idx != 0)
+    {
+        if (temp == NULL)
+        {
+            /* Handle case where index is out of bounds */
+            free(newNode);
+            return NULL;
+        }
+        temp = temp->next;
+        idx--;
+    }
+
+    temp2 = temp->prev;
+    temp2->next = newNode;
+    newNode->prev = temp2;
+    newNode->next = temp;
+    if (temp != NULL)
+    {
+        temp->prev = newNode;
+    }
+
+    return newNode;
 }
+
